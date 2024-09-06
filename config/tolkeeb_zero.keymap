@@ -12,6 +12,8 @@
 #define FN_L 4
 #define FR_L 5
 #define GM_L 6
+#define LGM_L 7
+#define LGM2_L 8
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 &lt { quick_tap_ms = <180>; };
@@ -32,7 +34,7 @@
         };
 
         nav_layer {
-            label = "NAV_Naviation";
+            label = "NAV_Navigation";
             bindings = <
                             &kp GRAVE     &kp UP        &kp PAGE_UP   &kp PAGE_DOWN &kp C_VOL_UP  &kp C_MUTE    &trans        &trans
 &trans        &kp HOME      &kp LEFT      &kp DOWN      &kp RIGHT     &kp END       &kp C_VOL_DN  &trans        &trans        &trans        &kp RIGHT_SHIFT &trans
@@ -70,9 +72,9 @@
         fn_layer {
             label = "FN_FnKeys";
             bindings = <
-                            &bt BT_CLR    &bt BT_CLR_ALL &trans       &trans        &trans        &kp F7        &kp F8        &kp F9
-&trans        &trans        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &trans        &kp F4        &kp F5        &kp F6        &trans        &to GM_L
-              &trans        &trans        &trans        &trans        &bt BT_SEL 4  &trans        &trans        &kp F1        &kp F2        &kp F3       
+                            &bt BT_CLR    &bt BT_CLR_ALL &trans       &trans        &kp F10        &kp F7        &kp F8        &kp F9
+&trans        &trans        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &kp F11        &kp F4        &kp F5        &kp F6        &to LGM_L        &to GM_L
+              &trans        &trans        &trans        &trans        &bt BT_SEL 4  &kp F13        &kp F1        &kp F2        &kp F3       &kp F12
 
                                                         &trans        &bt BT_NXT    &trans        &trans
                                                                       &bt BT_PRV    &trans
@@ -92,10 +94,34 @@
         };
         
         gaming_layer {
-            label = "GM_Gaming";
+            label = "GM_Gaming_RTS";
             bindings = <
                             &kp W         &kp E         &kp R         &kp T         &trans        &trans        &trans        &trans
 &kp TAB       &kp A         &kp S         &kp D         &kp F         &kp G         &trans        &trans        &trans        &trans        &trans        &to DEF_L
+              &kp Z         &kp X         &kp C         &kp V         &kp B         &trans        &trans        &trans        &trans        &trans        
+
+                                                        &sk LCTRL     &kp SPACE     &kp TAB       &kp ESCAPE
+                                                                      &sk LSHFT     &kp ENTER
+            >;
+        };
+
+        gaming_layer_l {
+            label = "GM_Gaming_layered";
+            bindings = <
+                            &kp W         &kp E         &kp R         &kp T         &kp Y        &kp U        &kp I        &kp O
+&kp TAB       &kp A         &kp S         &kp D         &kp F         &kp G         &kp H        &kp J        &kp K        &kp L        &kp SEMI        &to DEF_L
+              &kp Z         &kp X         &kp C         &kp V         &kp B         &kp N        &kp M        &kp P        &kp Q      &kp COMMA
+
+                                                        &hm LGUI ENTER    &lt LGM2_L SPACE      &kp TAB       &kp ESCAPE
+                                                                            &hm LSHIFT ESCAPE     &kp ENTER
+            >;
+        };
+
+        gaming_layered_second_layer {
+            label = "GM_Gaming_layered_2";
+            bindings = <
+                            &kp N1         &kp N2         &kp N3         &kp N4         &trans        &trans        &trans        &trans
+&kp TAB       &kp A         &kp N5         &kp N6         &kp N7         &kp N8         &trans        &trans        &trans        &trans        &trans        &to DEF_L
               &kp Z         &kp X         &kp C         &kp V         &kp B         &trans        &trans        &trans        &trans        &trans        
 
                                                         &sk LCTRL     &kp SPACE     &kp TAB       &kp ESCAPE
