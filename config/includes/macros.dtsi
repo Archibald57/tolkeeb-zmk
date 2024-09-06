@@ -50,6 +50,15 @@
                 ;
         };
         
+        i_trema: i_trema{ // ï
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp RA(U)>
+                , <&macro_tap &kp I>
+                ;
+        };
+
         e_circ: e_circ{ // ê
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;

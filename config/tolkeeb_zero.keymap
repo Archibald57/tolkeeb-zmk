@@ -6,14 +6,15 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define DEF_L 0
-#define NAV_L 1
-#define NUM_L 2
-#define SYM_L 3
-#define FN_L 4
-#define FR_L 5
-#define GM_L 6
-#define LGM_L 7
-#define LGM2_L 8
+#define ODK 1
+#define NAV_L 2
+#define NUM_L 3
+#define SYM_L 4
+#define FN_L 5
+#define FR_L 6
+#define GM_L 7
+#define LGM_L 8
+#define LGM2_L 9
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 &lt { quick_tap_ms = <180>; };
@@ -22,14 +23,27 @@
     keymap {
         compatible = "zmk,keymap";
 
+        // TODO Review thumb keys to be in-line
         default_layer {
             bindings = <
-                            &kp Y         &kp O         &kp F         &kp B         &kp K         &kp Q         &kp L         &kp V
-&kp STAR      &lt FN_L U    &hm LALT I    &hm LCTRL A   &hm LGUI C    &kp G         &kp M         &hm RGUI T    &hm RCTRL N   &hm LALT S    &lt FR_L R    &kp SLASH
-              &kp W         &kp COMMA     &kp PERIOD    &kp P         &kp J         &kp Z         &kp D         &kp H         &kp X         &kp SQT
+                         &kp C         &kp O         &kp P         &kp W         &kp J         &kp M         &kp D         &sl ODK
+&kp Q      &lt FN_L A    &hm LALT S    &hm LCTRL E   &hm LGUI N    &kp F         &kp L         &hm RGUI R    &hm RCTRL T   &hm LALT I      &lt FR_L U    &kp Y
+           &kp Z         &kp X         &dashion      &kp V         &kp B         &pecol        &kp H         &kp G         &comacol        &kp K
 
-                                                        &sk LSHIFT    &lt NAV_L E   &lt NUM_L SPACE    &lt_bs SYM_L 0
-                                                                      &e_acute      &lt FR_L TAB
+                                                        &sk LSHIFT    &kp LSHFT   &lt NUM_L SPACE    &lt_bs SYM_L 0
+                                                                      &e_acute    &lt FR_L TAB
+            >;
+        }; 
+
+        odk {
+            label = "ODK_OneDeadKey";
+            bindings = <
+                            &kp RA(C)    &kp LA(Q)       &o_circ     &trans        &trans        &trans        &kp UNDER     &kp LA(U)
+&a_circ       &a_grave      &e_acute     &e_grave     &e_circ     &trans        &kp LPAR      &kp RPAR      &i_circ       &i_trema      &u_grave       &u_circ
+              &kp LA(SQT)      &trans       &trans       &trans      &trans        &trans        &trans        &trans        &trans        &trans        
+
+                                                        &trans       &trans      &trans        &trans
+                                                                     &trans        &trans
             >;
         };
 
@@ -57,12 +71,13 @@
             >;
         };
 
+        // TODO Finalize right hand
         sym_layer {
             label = "SYM_Symbols";
             bindings = <
-                            &trans        &trans        &trans        &trans        &kp KP_DIVIDE &kp BSLH      &kp PIPE      &kp CARET
-&trans        &trans        &trans        &trans        &trans        &trans        &kp KP_MULTIPLY &kp EXCL    &kp QMARK     &kp AMPS     &kp PERCENT      &trans
-              &trans        &trans        &trans        &trans        &trans        &trans        &kp DOLLAR    &kp HASH      &kp AT       &kp PLUS
+                          &kp LT      &kp GT       &kp DOLLAR    &kp PERCENT        &kp AT      &kp AMPS      &kp STAR    &kp SQT
+&kp CARET     &kp LBRC    &kp LPAR     &kp RPAR      &kp RBRC      &kp EQUAL        &kp BSLH    &kp PLUS    &kp MINUS     &kp SLASH     &kp DQT      &kp GRAVE
+              &kp TILDE   &kp LBKT     &kp RBKT      &kp UNDER     &kp HASH         &kp PIPE    &kp EXCL    &kp SEMICOLON &kp COLON     &kp QUESTION
 
                                                         &trans        &trans        &trans        &trans
                                                                       &trans        &trans
