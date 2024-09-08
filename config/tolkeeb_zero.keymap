@@ -23,15 +23,15 @@
     keymap {
         compatible = "zmk,keymap";
 
-        // TODO Review thumb keys to be in-line
+        // TODO Review thumb keys to be in-line with Arsenik
         default_layer {
             bindings = <
-                         &kp C         &kp O         &kp P         &kp W         &kp J         &kp M         &kp D         &sl ODK
+                         &kp C         &kp O         &kp P         &kp W         &kp J         &kp M         &kp D         &odkexc
 &kp Q      &lt FN_L A    &hm LALT S    &hm LCTRL E   &hm LGUI N    &kp F         &kp L         &hm RGUI R    &hm RCTRL T   &hm LALT I      &lt FR_L U    &kp Y
            &kp Z         &kp X         &dashion      &kp V         &kp B         &pecol        &kp H         &kp G         &comacol        &kp K
 
-                                                        &sk LSHIFT    &kp LSHFT   &lt NUM_L SPACE    &lt_bs SYM_L 0
-                                                                      &e_acute    &lt FR_L TAB
+                                                &sk LSHIFT    &lt NAV_L SPACE   &lt NUM_L SPACE    &lt_bs SYM_L 0
+                                                              &e_acute          &lt FR_L TAB
             >;
         }; 
 
@@ -71,7 +71,6 @@
             >;
         };
 
-        // TODO Finalize right hand
         sym_layer {
             label = "SYM_Symbols";
             bindings = <
@@ -162,36 +161,20 @@
             layers = <0>;
         };
 
-        // TODO Review/delete
-        combo_top_left_left {         
-            timeout-ms = <50>;
-            key-positions = <0 1>;
-            bindings = <&kp J>;
-            layers = <0>;
-        };
+        // combo_top_left_right {
+        //     timeout-ms = <40>;
+        //     require-prior-idle-ms = <50>;
+        //     key-positions = <1 2>;
+        //     bindings = <&kp SEMICOLON>;
+        //     layers = <0>;
+        // };
 
-        combo_top_left_right {
-            timeout-ms = <40>;
-            require-prior-idle-ms = <50>;
-            key-positions = <1 2>;
-            bindings = <&kp SEMICOLON>;
-            layers = <0>;
-        };
-
-        combo_top_right_left {
-            timeout-ms = <50>;
-            key-positions = <5 6>;
-            bindings = <&kp MINUS>;
-            layers = <0>;
-        };
-
-        // TODO Review/delete
-        combo_top_right_right {
-            timeout-ms = <50>;
-            key-positions = <6 7>;
-            bindings = <&kp Z>;
-            layers = <0>;
-        };
+        // combo_top_right_left {
+        //     timeout-ms = <50>;
+        //     key-positions = <5 6>;
+        //     bindings = <&kp MINUS>;
+        //     layers = <0>;
+        // };
 
         // Braces combos
         combo_col_0 {
@@ -237,21 +220,21 @@
         };
 
         // Extra exotic combos
-        combo_thumbs {
-            timeout-ms = <50>;
-            key-positions = <31 33>;
-            bindings = <&e_acute>;
-            layers = <0>;
-        };
+        // combo_thumbs {
+        //     timeout-ms = <50>;
+        //     key-positions = <31 33>;
+        //     bindings = <&e_acute>;
+        //     layers = <0>;
+        // };
 
-        combo_left_thumb {
-            timeout-ms = <50>;
-            key-positions = <30 31>;
-            bindings = <&kp SLASH>;
-            layers = <0>;
-        };
+        // combo_left_thumb {
+        //     timeout-ms = <50>;
+        //     key-positions = <30 31>;
+        //     bindings = <&kp SLASH>;
+        //     layers = <0>;
+        // };
 
-        // combo_right_thumb {
+        //         // combo_right_thumb {
         //     timeout-ms = <50>;
         //     key-positions = <32 33>;
         //     bindings = <&kp TAB>;
@@ -287,25 +270,5 @@
             layers = <GM_L>;
         };
 
-        // combo_left_diagonal_up {
-        //     timeout-ms = <50>;
-        //     key-positions = <2 10>;
-        //     bindings = <&e_acute>;
-        //     layers = <0>;
-        // };
-
-        // combo_left_diagonal_down {
-        //     timeout-ms = <50>;
-        //     key-positions = <10 21>;
-        //     bindings = <&e_grave>;
-        //     layers = <0>;
-        // };
-
-        // combo_left_pinky {
-        //     timeout-ms = <50>;
-        //     key-positions = <0 8>;
-        //     bindings = <&a_grave>;
-        //     layers = <0>;
-        // };
     };
 };

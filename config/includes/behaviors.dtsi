@@ -27,6 +27,13 @@
             quick-tap-ms = <200>;
         };
 
+        odkexc: od_kc_excl {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&sl 1>, <&kp EXCL>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
         dashion: dash_question {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
