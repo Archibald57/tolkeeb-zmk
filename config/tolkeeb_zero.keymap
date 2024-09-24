@@ -42,7 +42,7 @@
 &a_circ       &a_grave      &e_acute     &e_grave     &e_circ     &trans        &kp LPAR      &kp RPAR      &i_circ       &i_trema      &u_grave       &u_circ
               &kp LA(SQT)      &trans       &trans       &trans      &trans        &trans        &trans        &trans        &trans        &trans        
 
-                                                        &trans       &trans      &trans        &trans
+                                                        &trans       &trans      &kp APOS        &trans
                                                                      &trans        &trans
             >;
         };
