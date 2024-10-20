@@ -50,7 +50,7 @@
         nav_layer {
             label = "NAV_Navigation";
             bindings = <
-                            &kp GRAVE     &kp UP        &kp PAGE_UP   &kp PAGE_DOWN &kp C_VOL_UP  &kp C_MUTE    &trans        &trans
+                            &kp PAGE_DOWN &kp UP        &kp PAGE_UP   &kp PAGE_DOWN &kp C_VOL_UP  &kp C_MUTE    &trans        &trans
 &trans        &kp HOME      &kp LEFT      &kp DOWN      &kp RIGHT     &kp END       &kp C_VOL_DN  &trans        &trans        &trans        &kp RIGHT_SHIFT &trans
               &kp LG(Z)     &kp LG(X)     &kp LG(C)     &kp LG(V)     &trans        &trans        &kp C_STOP    &kp C_PREV    &kp C_NEXT    &kp C_PP
 
@@ -155,105 +155,77 @@
 
         // This need to be the 1st entry for the yq command in README to work
         combo_caps_word {
-            timeout-ms = <50>;
+            timeout-ms = <40>;
             key-positions = <20 29>;
             bindings = <&caps_word>;
             layers = <0>;
+            require-prior-idle-ms = <100>;  
         };
 
-        // combo_top_left_right {
-        //     timeout-ms = <40>;
-        //     require-prior-idle-ms = <50>;
-        //     key-positions = <1 2>;
-        //     bindings = <&kp SEMICOLON>;
-        //     layers = <0>;
-        // };
-
-        // combo_top_right_left {
-        //     timeout-ms = <50>;
-        //     key-positions = <5 6>;
-        //     bindings = <&kp MINUS>;
-        //     layers = <0>;
-        // };
-
         // Braces combos
-        combo_col_0 {
-            timeout-ms = <50>;
+        combo_col_1 {
+            timeout-ms = <40>;
             key-positions = <0 10>;
             bindings = <&kp LEFT_BRACKET>;
             layers = <0>;
+            require-prior-idle-ms = <100>;  
         };
 
         combo_col_2 {
-            timeout-ms = <50>;
+            timeout-ms = <40>;
             key-positions = <1 11>;
             bindings = <&kp LEFT_PARENTHESIS>;
             layers = <0>;
+            require-prior-idle-ms = <100>;  
         };
 
         combo_col_3 {
-            timeout-ms = <50>;
+            timeout-ms = <40>;
             key-positions = <2 12>;
             bindings = <&kp LEFT_BRACE>;
             layers = <0>;
+            require-prior-idle-ms = <100>;  
         };
 
         combo_col_4 {
-            timeout-ms = <50>;
+            timeout-ms = <40>;
             key-positions = <5 15>;
             bindings = <&kp RIGHT_BRACE>;
             layers = <0>;
+            require-prior-idle-ms = <100>;  
         };
 
         combo_col_5 {
-            timeout-ms = <50>;
+            timeout-ms = <40>;
             key-positions = <6 16>;
             bindings = <&kp RIGHT_PARENTHESIS>;
             layers = <0>;
+            require-prior-idle-ms = <100>;  
         };
 
         combo_col_6 {
-            timeout-ms = <50>;
+            timeout-ms = <40>;
             key-positions = <7 17>;
             bindings = <&kp RIGHT_BRACKET>;
             layers = <0>;
+            require-prior-idle-ms = <100>;  
         };
-
-        // Extra exotic combos
-        // combo_thumbs {
-        //     timeout-ms = <50>;
-        //     key-positions = <31 33>;
-        //     bindings = <&e_acute>;
-        //     layers = <0>;
-        // };
-
-        // combo_left_thumb {
-        //     timeout-ms = <50>;
-        //     key-positions = <30 31>;
-        //     bindings = <&kp SLASH>;
-        //     layers = <0>;
-        // };
-
-        //         // combo_right_thumb {
-        //     timeout-ms = <50>;
-        //     key-positions = <32 33>;
-        //     bindings = <&kp TAB>;
-        //     layers = <0>;
-        // };
 
         // Vim-inspired (old J-K)
         combo_exit {
-            timeout-ms = <50>;
+            timeout-ms = <40>;
             key-positions = <22 23>;
             bindings = <&kp ESC>;
             layers = <0>;
+            require-prior-idle-ms = <100>;  
         };
 
-        combo_bottom_right_left {
-            timeout-ms = <50>;
+        combo_ret {
+            timeout-ms = <40>;
             key-positions = <26 27>;
             bindings = <&kp RET>;
             layers = <0>;
+            require-prior-idle-ms = <100>;  
         };
 
         combo_gaming_first {
@@ -269,6 +241,28 @@
             bindings = <&kp M>;
             layers = <GM_L>;
         };
+
+        // Extra exotic combos
+        // combo_thumbs {
+        //     timeout-ms = <40>;
+        //     key-positions = <31 33>;
+        //     bindings = <&e_acute>;
+        //     layers = <0>;
+        // };
+
+        // combo_left_thumb {
+        //     timeout-ms = <40>;
+        //     key-positions = <30 31>;
+        //     bindings = <&kp SLASH>;
+        //     layers = <0>;
+        // };
+
+        // combo_right_thumb {
+        //     timeout-ms = <40>;
+        //     key-positions = <32 33>;
+        //     bindings = <&kp TAB>;
+        //     layers = <0>;
+        // };
 
     };
 };
