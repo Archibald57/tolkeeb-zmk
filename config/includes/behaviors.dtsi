@@ -8,7 +8,7 @@
             flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <200>; // Double tapping -> hold key
-            require-prior-idle-ms = <200>;  
+            require-prior-idle-ms = <100>;  
             bindings = <&kp>, <&kp>;
         };
 

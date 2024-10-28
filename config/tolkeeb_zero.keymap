@@ -217,7 +217,7 @@
             key-positions = <22 23>;
             bindings = <&kp ESC>;
             layers = <0>;
-            require-prior-idle-ms = <100>;  
+            require-prior-idle-ms = <50>;  
         };
 
         combo_ret {
@@ -225,7 +225,7 @@
             key-positions = <26 27>;
             bindings = <&kp RET>;
             layers = <0>;
-            require-prior-idle-ms = <100>;  
+            require-prior-idle-ms = <50>;  
         };
 
         combo_gaming_first {
