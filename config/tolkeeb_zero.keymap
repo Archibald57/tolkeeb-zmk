@@ -66,7 +66,7 @@
 &kp MEH(RBKT)     &kp MEH(HOME)      &kp MEH(LEFT)      &kp MEH(DOWN)      &kp MEH(RIGHT)     &kp MEH(END)              &kp STAR      &kp N4      &kp N5        &kp N6        &kp N0        &kp EQUAL
               &kp MEH(MINUS)      &kp MEH(SLASH)     &kp MEH(EQUAL)     &kp MEH(BACKSLASH)     &kp MEH(LBKT)               &kp PERCENT   &kp N1        &kp N2        &kp N3        &kp PLUS
 
-                                                        &trans        &trans        &trans        &trans
+                                                        &trans        &kp LCMD        &trans        &trans
                                                                       &trans        &trans
             >;
         };
