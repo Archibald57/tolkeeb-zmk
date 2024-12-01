@@ -14,6 +14,8 @@
 #define GM_L 7
 #define LGM_L 8
 #define LGM2_L 9
+#define HYP(key) LS(LC(LA(LG(key))))
+#define MEH(key) LS(LC(LA(key)))
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 &lt { quick_tap_ms = <180>; };
@@ -52,17 +54,17 @@
 &trans        &kp HOME      &kp LEFT      &kp DOWN      &kp RIGHT     &kp END       &kp C_VOL_DN  &trans        &trans        &trans        &kp RIGHT_SHIFT &trans
               &kp LG(Z)     &kp LG(X)     &kp LG(C)     &kp LG(V)     &trans        &trans        &kp C_STOP    &kp C_PREV    &kp C_NEXT    &kp C_PP
 
-                                                        &trans        &trans        &kp LC(LA(LS(SPACE)))        &kp LC(LA(LS(BACKSPACE)))
-                                                                      &trans        &kp LC(LA(LS(TAB)))
+                                                        &trans        &trans        &kp MEH(SPACE)        &kp MEH(BACKSPACE)
+                                                                      &trans        &kp MEH(TAB)
             >;
         };
 
         math_layer {
             label = "NUM_Numbers";
             bindings = <
-                            &hyp PAGE_DOWN &hyp UP        &hyp PAGE_UP   &hyp PAGE_DOWN        &kp KP_DIVIDE &kp N7        &kp N8        &kp N9
-&hyp RBKT     &hyp HOME      &hyp LEFT      &hyp DOWN      &hyp RIGHT     &hyp END              &kp STAR      &kp N4      &kp N5        &kp N6        &kp N0        &kp EQUAL
-              &hyp MINUS      &hyp SLASH     &hyp EQUAL     &hyp BACKSLASH     &hyp LBKT               &kp PERCENT   &kp N1        &kp N2        &kp N3        &kp PLUS
+                            &kp MEH(PAGE_DOWN) &kp MEH(UP)        &kp MEH(PAGE_UP)   &kp MEH(PAGE_DOWN)        &kp KP_DIVIDE &kp N7        &kp N8        &kp N9
+&kp MEH(RBKT)     &kp MEH(HOME)      &kp MEH(LEFT)      &kp MEH(DOWN)      &kp MEH(RIGHT)     &kp MEH(END)              &kp STAR      &kp N4      &kp N5        &kp N6        &kp N0        &kp EQUAL
+              &kp MEH(MINUS)      &kp MEH(SLASH)     &kp MEH(EQUAL)     &kp MEH(BACKSLASH)     &kp MEH(LBKT)               &kp PERCENT   &kp N1        &kp N2        &kp N3        &kp PLUS
 
                                                         &trans        &trans        &trans        &trans
                                                                       &trans        &trans
