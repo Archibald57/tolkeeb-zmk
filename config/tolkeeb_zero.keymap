@@ -30,7 +30,7 @@
 &kp Q      &lt FN_L A    &hm LALT S    &hm LCTRL E   &hm LGUI N    &kp F         &kp L         &hm RGUI R    &hm RCTRL T   &hm LALT I      &kp U    &kp Y
            &kp Z         &kp X         &dashion      &kp V         &kp B         &pecol        &kp H         &kp G         &comacol        &kp K
 
-                                                &sk LSHIFT    &lt NAV_L SPACE   &lt NUM_L SPACE    &lt_bs SYM_L 0
+                                                &sk LSHIFT    &lt NAV_L MEH(TAB)   &lt NUM_L SPACE    &lt_bs SYM_L 0
                                                            &sk LS(LA(LCTRL))  &mt LCMD TAB
             >;
         }; 
