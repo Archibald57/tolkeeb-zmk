@@ -11,7 +11,6 @@
 #define NUM_L 3
 #define SYM_L 4
 #define FN_L 5
-#define FR_L 6
 #define GM_L 7
 #define LGM_L 8
 #define LGM2_L 9
@@ -23,24 +22,23 @@
     keymap {
         compatible = "zmk,keymap";
 
-        // TODO Review thumb keys to be in-line with Arsenik
         default_layer {
             bindings = <
                          &kp C         &kp O         &kp P         &kp W         &kp J         &kp M         &kp D         &odkexc
-&kp Q      &lt FN_L A    &hm LALT S    &hm LCTRL E   &hm LGUI N    &kp F         &kp L         &hm RGUI R    &hm RCTRL T   &hm LALT I      &lt FR_L U    &kp Y
+&kp Q      &lt FN_L A    &hm LALT S    &hm LCTRL E   &hm LGUI N    &kp F         &kp L         &hm RGUI R    &hm RCTRL T   &hm LALT I      &kp U    &kp Y
            &kp Z         &kp X         &dashion      &kp V         &kp B         &pecol        &kp H         &kp G         &comacol        &kp K
 
                                                 &sk LSHIFT    &lt NAV_L SPACE   &lt NUM_L SPACE    &lt_bs SYM_L 0
-                                                              &e_acute          &lt FR_L TAB
+                                                         &sk LG(LS(LA(LCTRL)))  &kp TAB
             >;
         }; 
 
         odk {
             label = "ODK_OneDeadKey";
             bindings = <
-                            &kp RA(C)    &kp LA(Q)       &o_circ     &trans        &trans        &trans        &kp UNDER     &kp LA(U)
+                            &kp RA(C)    &kp LA(Q)    &o_circ     &trans        &trans        &trans        &kp UNDER     &kp LA(U)
 &a_circ       &a_grave      &e_acute     &e_grave     &e_circ     &trans        &kp LPAR      &kp RPAR      &i_circ       &i_trema      &u_grave       &u_circ
-              &kp LA(SQT)      &trans       &trans       &trans      &trans        &trans        &trans        &trans        &trans        &trans        
+              &kp LA(SQT)   &trans       &trans       &trans      &trans        &trans        &trans        &trans        &trans        &trans        
 
                                                         &trans       &trans      &kp APOS        &trans
                                                                      &trans        &trans
@@ -54,17 +52,17 @@
 &trans        &kp HOME      &kp LEFT      &kp DOWN      &kp RIGHT     &kp END       &kp C_VOL_DN  &trans        &trans        &trans        &kp RIGHT_SHIFT &trans
               &kp LG(Z)     &kp LG(X)     &kp LG(C)     &kp LG(V)     &trans        &trans        &kp C_STOP    &kp C_PREV    &kp C_NEXT    &kp C_PP
 
-                                                        &trans        &trans        &trans        &trans
-                                                                      &trans        &trans
+                                                        &trans        &trans        &kp LC(LA(LS(SPACE)))        &kp LC(LA(LS(BACKSPACE)))
+                                                                      &trans        &kp LC(LA(LS(TAB)))
             >;
         };
 
         math_layer {
             label = "NUM_Numbers";
             bindings = <
-                            &trans        &trans        &trans        &trans        &kp KP_DIVIDE &kp N7        &kp N8        &kp N9
-&trans        &trans        &trans        &trans        &trans        &trans        &kp STAR      &kp N4      &kp N5        &kp N6        &kp N0        &kp EQUAL
-              &trans        &trans        &trans        &trans        &trans        &kp PERCENT   &kp N1        &kp N2        &kp N3        &kp PLUS
+                            &hyp PAGE_DOWN &hyp UP        &hyp PAGE_UP   &hyp PAGE_DOWN        &kp KP_DIVIDE &kp N7        &kp N8        &kp N9
+&hyp RBKT     &hyp HOME      &hyp LEFT      &hyp DOWN      &hyp RIGHT     &hyp END              &kp STAR      &kp N4      &kp N5        &kp N6        &kp N0        &kp EQUAL
+              &hyp MINUS      &hyp SLASH     &hyp EQUAL     &hyp BACKSLASH     &hyp LBKT               &kp PERCENT   &kp N1        &kp N2        &kp N3        &kp PLUS
 
                                                         &trans        &trans        &trans        &trans
                                                                       &trans        &trans
@@ -87,7 +85,7 @@
             label = "FN_FnKeys";
             bindings = <
                             &bt BT_CLR    &bt BT_CLR_ALL &trans       &trans        &kp F10        &kp F7        &kp F8        &kp F9
-&trans        &trans        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &kp F11        &kp F4        &kp F5        &kp F6        &to LGM_L        &to GM_L
+&sys_reset        &trans        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &kp F11        &kp F4        &kp F5        &kp F6        &to LGM_L        &to GM_L
               &trans        &trans        &trans        &trans        &bt BT_SEL 4  &kp F13        &kp F1        &kp F2        &kp F3       &kp F12
 
                                                         &trans        &bt BT_NXT    &trans        &trans
@@ -95,18 +93,6 @@
             >;
         };
 
-        french_layer {
-            label = "FR_French";
-            bindings = <
-                            &trans        &o_circ       &trans        &trans        &trans        &trans        &trans        &trans
-&trans        &u_grave      &i_circ       &a_grave      &kp RA(C)     &trans        &trans        &trans        &trans        &trans        &trans        &trans
-              &u_circ       &i_circ       &a_circ       &trans        &trans        &trans        &trans        &trans        &trans        &trans        
-
-                                                        &e_circ       &e_grave      &trans        &trans
-                                                                      &trans        &trans
-            >;
-        };
-        
         gaming_layer {
             label = "GM_Gaming_RTS";
             bindings = <

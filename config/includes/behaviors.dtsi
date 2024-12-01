@@ -56,6 +56,15 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
+        hyp: hyper_mod {
+            compatible = "zmk,behavior-macro-one-param";
+            label = "HYPER_MOD";
+            #binding-cells = <1>;
+            bindings = <&macro_press &kp LSHIFT &kp LCTRL &kp LALT &kp LGUI>
+                     , <&macro_tap &kp MACRO_PLACEHOLDER>
+                     , <&macro_release &kp LGUI &kp LALT &kp LCTRL &kp LSHIFT>;
+        };
+
         // TODO Unused atm, not playing well w/ interruptions (tap-e -> qeu)
         // qu_q: tap_dance_0 {
         //     compatible = "zmk,behavior-tap-dance";
