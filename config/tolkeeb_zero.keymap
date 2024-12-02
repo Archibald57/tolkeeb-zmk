@@ -11,9 +11,9 @@
 #define NUM_L 3
 #define SYM_L 4
 #define FN_L 5
-#define GM_L 7
-#define LGM_L 8
-#define LGM2_L 9
+#define GM_L 6
+#define LGM_L 7
+#define LGM2_L 8
 #define HYP(key) LS(LC(LA(LG(key))))
 #define MEH(key) LS(LC(LA(key)))
 
