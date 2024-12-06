@@ -142,7 +142,7 @@ layers:
         "=",
         { t: ▽, type: trans },
         $$phosphor:bold/square-split-horizontal$$,
-        $$phosphor:bold/square-split-horizontal$$,
+        $$phosphor:bold/arrows-out$$,
         🪗,
         { t: ▽, type: trans },
         "%",
