@@ -1,2 +1,0 @@
-config SHIELD_TOLKEEB_ZERO
-    def_bool $(shields_list_contains,tolkeeb_zero)
